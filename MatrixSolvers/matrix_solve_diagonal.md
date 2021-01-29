@@ -1,6 +1,6 @@
 # Software Manual (matrix_solve_diagonal.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_solve_diagonal.py
 
@@ -19,7 +19,7 @@
 **Usage/Example:**
 
 Below shows an example of solving a system of linear equations of the form "Ax = b" using the routine "matrix_solve_diagonal".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix = [[4,0,0,0,0],[0,5,0,0,0],[0,0,2,0,0],[0,0,0,3,0],[0,0,0,0,8]]
       vector = [12,25,38,27,48]
@@ -29,16 +29,16 @@ Output from the lines above:
 
       [3.0, 5.0, 19.0, 9.0, 6.0]
 
-In the example above, the diagonal matrix representing "A" in the system "Ax = b" had a width of "5". The output vector "x" is the solution 
+In the example above, the diagonal matrix representing "A" in the system "Ax = b" had a width of "5". The output vector "x" is the solution
 vector to the system, so that Ax = b.
 
 **Implementation/Code:** The following is the code for matrix_solve_diagonal()
-      
+
       def matrix_solve_diagonal(matrix,vector):
           width = len(matrix)
           solution = [0]*len(vector)
-      
+
           for i in range(width):
               solution[i] = vector[i]/matrix[i][i]
-      
+
           return solution

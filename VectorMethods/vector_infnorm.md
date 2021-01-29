@@ -1,6 +1,6 @@
 # Software Manual (vector_infnorm.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           vector_infnorm.py
 
@@ -17,7 +17,7 @@
 
 **Usage/Example:**
 
-Below shows an example of finding the infinity-norm of a vector with a length of 5 using the routine "vector_infnorm". 
+Below shows an example of finding the infinity-norm of a vector with a length of 5 using the routine "vector_infnorm".
 
       vector = [5,7,9,2,5]
       print(vector_infnorm(vector))

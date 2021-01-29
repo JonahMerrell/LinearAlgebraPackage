@@ -1,6 +1,6 @@
 # Software Manual (matrix_scal_mult.py)
 
-## [Back](../softwaremanual)
+## [Back](../)
 
 **Routine Name:**           matrix_scal_mult.py
 
@@ -13,14 +13,14 @@
 
 **Input:** argument1: The scalar to be multiplied with the matrix<br>
 		   argument2: The matrix to be multiplied
-		   
+
 **Output:** This routine returns a matrix that is obtained from the result of multiplying all of its
-  componenents by the scalar given. 
+  componenents by the scalar given.
 
 **Usage/Example:**
 
 Below shows an example of a matrix with a length of 5 being multiplied by 5 using the routine
- "matrix_scal_mult". 
+ "matrix_scal_mult".
 
       matrix = [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]]
       print(matrix_scal_mult(5,matrix))
@@ -38,7 +38,5 @@ The above matrix printed is the 5 times greater then the original matrix provide
 
       def matrix_scal_mult(scalar,matrix):
           matrix_new = [[scalar*matrix[j][i] for i in range(len(matrix[0]))] for j in range(len(matrix))]
-      
+
           return matrix_new
-
-

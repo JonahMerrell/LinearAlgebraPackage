@@ -1,6 +1,6 @@
 # Software Manual (root_solve_secant.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           root_solve_secant.py
 
@@ -15,13 +15,13 @@
 		   argument3: The second initial quess to start the method<br>
            argument4: The tolerance used to determine when to stop iterating. (A number like 0.00001)<br>
 		   argument5: The maximum iterations allowed while iterating.<br>
-		   
+
 **Output:** This routine returns the solution x to the equation f(x)=0, where f(x) is given in the input.
 
 **Usage/Example:**
 
 Below shows an example of solving the equation math.cos(x) - x = 0 using the routine "root_solve_secant".
- Then the solution is printed. 
+ Then the solution is printed.
 
       import math
 	  def function(x):
@@ -35,24 +35,24 @@ Output from the lines above:
 In the example above, 0.7390851332151607 is the approximation for the solution to the equation math.cos(x) - x = 0
 
 **Implementation/Code:** The following is the code for root_solve_secant()
-      
+
       def root_solve_secant(f, x_0, x_1, tol, maxiter,getIterCount=False):
-          
+
           if (f(x_0) == 0) :
               return x_0
           if (f(x_1) == 0) :
               return x_1
-      
+
           error = 10*tol
           iter = 0
           while(error > tol and iter < maxiter):
               iter += 1
               x_2 = x_1 - f(x_1)*(x_1-x_0)/(f(x_1)-f(x_0))
               error = abs(x_2 - x_1)
-      
+
               x_0 = x_1
               x_1 = x_2
-      
+
           if getIterCount == False:
               return x_2
           else:

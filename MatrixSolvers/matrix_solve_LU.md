@@ -1,6 +1,6 @@
 # Software Manual (matrix_solve_LU.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_solve_LU.py
 
@@ -19,7 +19,7 @@ The solution is calculated by performing LU factorization (changing the system o
 **Usage/Example:**
 
 Below shows an example of solving a system of linear equations of the form "Ax = b" using the routine "matrix_solve_LU".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix_example = [[1,1,-1],[1,-2,3],[2,3,1]]
       vector_example = [4,-6,7]
@@ -33,12 +33,12 @@ In the example above, the matrix representing "A" in the system "Ax = b" had a w
  is the solution vector to the system, so that Ax = b.
 
 **Implementation/Code:** The following is the code for matrix_solve_LU()
-      
+
       import sys, os
       sys.path.append(os.path.abspath('../../mylibrary'))
       from _mymodules import matrix_solve_upper_tri, matrix_solve_lower_tri,matrix_LU_factor
-      
-      
+
+
       def matrix_solve_LU(matrix,vector):
           temp_list = matrix_LU_factor(matrix)
           matrix_l = temp_list[0]

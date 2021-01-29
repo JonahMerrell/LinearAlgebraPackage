@@ -1,6 +1,6 @@
 # Software Manual (vector_1norm.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           vector_1norm.py
 
@@ -18,7 +18,7 @@
 
 **Usage/Example:**
 
-Below shows an example of finding the 1-norm of a vector with a length of 5 using the routine "vector_1norm". 
+Below shows an example of finding the 1-norm of a vector with a length of 5 using the routine "vector_1norm".
 
       vector = [5,7,9,2,5]
       print(vector_1norm(vector))
@@ -36,5 +36,5 @@ The above number printed is the 1-norm of the given vector.
           sum = 0.0
           for i in range(len(vector)):
               sum += abs(vector[i])
-      
+
           return sum

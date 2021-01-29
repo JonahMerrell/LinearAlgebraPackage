@@ -1,6 +1,6 @@
 # Software Manual (matrix_solve_lower_tri.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_solve_lower_tri.py
 
@@ -19,7 +19,7 @@
 **Usage/Example:**
 
 Below shows an example of solving a system of linear equations of the form "Ax = b" using the routine "matrix_solve_lower_tri".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix = [[8,0,0,0,0],[1,3,0,0,0],[3,7,2,0,0],[2,7,5,2,0],[7,3,10,8,4]]
       vector = [12,25,38,27,48]
@@ -33,15 +33,15 @@ In the example above, the lower triangle matrix representing "A" in the system "
  is the solution vector to the system, so that Ax = b.
 
 **Implementation/Code:** The following is the code for matrix_solve_lower_tri()
-      
+
       def matrix_solve_lower_tri(matrix,vector):
           n = len(matrix)
           solution = [0]*len(vector)
-      
+
           for i in range(0, n, 1):
               temp_var = vector[i]
               for j in range(i, -1, -1):
                   temp_var -= matrix[i][j] * solution[j]
               solution[i] = temp_var/matrix[i][i]
-      
+
           return solution

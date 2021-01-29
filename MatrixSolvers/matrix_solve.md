@@ -1,6 +1,6 @@
 # Software Manual (matrix_solve.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_solve.py
 
@@ -19,7 +19,7 @@ The solution is calculated by Gaussian elimination (elementary row operations) t
 **Usage/Example:**
 
 Below shows an example of solving a system of linear equations of the form "Ax = b" using the routine "matrix_solve".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix_example = [[6,5,4,3,2],[8,9,8,3,5],[1,3,4,6,8],[5,2,7,4,5],[7,3,8,5,8]]
       vector_example = [12,25,38,27,48]
@@ -33,12 +33,12 @@ In the example above, the matrix representing "A" in the system "Ax = b" had a w
  is the solution vector to the system, so that Ax = b.
 
 **Implementation/Code:** The following is the code for matrix_solve()
-      
+
       import sys, os
       sys.path.append(os.path.abspath('../../mylibrary'))
       from _mymodules import matrix_ref, matrix_solve_upper_tri
-      
-      
+
+
       def matrix_solve(matrix,vector):
           n = len(matrix)
           solution = [0] * len(vector)
@@ -48,7 +48,7 @@ In the example above, the matrix representing "A" in the system "Ax = b" had a w
           for i in range(n):
               solution[i] = ref_matrix[i][-1]
               del ref_matrix[i][-1]
-      
+
           solution = matrix_solve_upper_tri(ref_matrix,solution)
-      
+
           return solution

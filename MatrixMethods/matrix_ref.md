@@ -1,6 +1,6 @@
 # Software Manual (matrix_ref.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_ref.py
 

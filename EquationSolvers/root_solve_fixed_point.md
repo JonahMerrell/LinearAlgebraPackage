@@ -1,6 +1,6 @@
 # Software Manual (root_solve_fixed_point.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           root_solve_fixed_point.py
 
@@ -14,13 +14,13 @@
 		   argument2: The initial guess x_0 to start of teh iteration<br>
            argument3: The tolerance used to determine when to stop iterating. (A number like 0.00001)<br>
 		   argument4: The maximum iterations allowed while iterating.<br>
-		   
+
 **Output:** This routine returns the solution x to the equation f(x)=0, where f(x) is given in the input.
 
 **Usage/Example:**
 
 Below shows an example of solving the equation math.cos(x) - x = 0 using the routine "root_solve_fixed_point".
- Then the solution is printed. 
+ Then the solution is printed.
 
       import math
 	  def function(x):
@@ -34,9 +34,9 @@ Output from the lines above:
 In the example above, 0.7391130048798942 is the approximation for the solution to the equation math.cos(x) - x = 0
 
 **Implementation/Code:** The following is the code for root_solve_fixed_point()
-      
+
       def root_solve_fixed_point(function, x_0, tol, maxiter):
-      
+
           error = 10* tol
           x = x_0
           iter = 0

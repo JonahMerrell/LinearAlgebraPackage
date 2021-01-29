@@ -1,6 +1,6 @@
 # Software Manual (matrix_add.py)
 
-## [Back](../softwaremanual)
+## [Back](../)
 
 **Routine Name:**           matrix_add.py
 
@@ -15,14 +15,14 @@
 **Input:** argument1: The first matrix to be added<br>
 		   argument2: The second matrix to be added<br>
 		   The 2 matrices given must have equal dimensions.
-		   
+
 **Output:** This routine returns a matrix that is obtained from the result of adding the
- corresponding componenents of 2 matrices together. 
+ corresponding componenents of 2 matrices together.
 
 **Usage/Example:**
 
 Below shows an example of 2 different matrices with a length of 5 being added together using the routine
- "matrix_add". 
+ "matrix_add".
 
       matrix1 = [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]]
       matrix2 = [[26,27,28,29,30],[31,32,33,34,35],[36,37,38,39,40],[41,42,43,44,45],[46,47,48,49,50]]
@@ -42,5 +42,5 @@ The above matrix printed is the "sum" of the previous 2 matrices provided.
           for i in range(len(matrix_sum)):
               for j in range(len(matrix_sum[0])):
                   matrix_sum[i][j] = matrix1[i][j] + matrix2[i][j]
-      
+
           return matrix_sum

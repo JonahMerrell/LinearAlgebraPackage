@@ -1,6 +1,6 @@
 # Software Manual (matrix_find_eigenvalues.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_find_eigenvalues.py
 
@@ -8,18 +8,18 @@
 
 **Language:** Python 3.7.0
 
-**Description/Purpose:** This routine will attempt to find all of the eigenvalues of a given matrix by first 
-computing the smallest and largest eigenvalues using the power iteration and inverse power iteration method, 
+**Description/Purpose:** This routine will attempt to find all of the eigenvalues of a given matrix by first
+computing the smallest and largest eigenvalues using the power iteration and inverse power iteration method,
 and then using shifting to find eigenvalues inbetween.
 
 **Input:** argument1: The matrix "A" in the system of linear equations Ax = b<br>
-		   
+
 **Output:** This routine returns a list of the eigenvalues of the matrix.
 
 **Usage/Example:**
 
 Below shows an example of finding the eigenvalues of a matrix by using the routine "matrix_find_eigenvalues".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix_example = [[7,1,1],[3,1,2],[1,3,2]]
       print(matrix_find_eigenvalues(matrix_example))
@@ -31,18 +31,18 @@ Output from the lines above:
 In the example above, the matrix representing "A" has a width of "3". The output represents the 3 eigenvalues of A.
 
 **Implementation/Code:** The following is the code for matrix_find_eigenvalues()
-      
+
       import sys, os
       sys.path.append(os.path.abspath('../../mylibrary'))
       from _mymodules import matrix_inverse_power_iteration, matrix_power_iteration
-      
+
       def matrix_find_eigenvalues(matrix):
           eigenvalues = []
           eigenvalues.append(matrix_inverse_power_iteration(matrix,0.56,0.00000000000001,20000))
           eigenvalues.append(matrix_power_iteration(matrix,0.0000000001,20000))
           find_middle_eigenvalue(matrix,eigenvalues,eigenvalues[0],eigenvalues[1])
           return eigenvalues
-      
+
       def find_middle_eigenvalue(matrix,eigenvalues,min_value,max_value):
           middle = (max_value + min_value) / 2
           middle_eigenvalue, count = matrix_inverse_power_iteration(matrix, middle, 0.00000000000001, 1000,getIterCount=True)

@@ -1,6 +1,6 @@
 # Software Manual (vector_2norm.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           vector_2norm.py
 
@@ -18,7 +18,7 @@
 
 **Usage/Example:**
 
-Below shows an example of finding the 2-norm of a vector with a length of 5 using the routine "vector_2norm". 
+Below shows an example of finding the 2-norm of a vector with a length of 5 using the routine "vector_2norm".
 
       vector = [5,7,9,2,5]
       print(vector_2norm(vector))
@@ -32,11 +32,11 @@ The above number printed is the 2-norm of the given vector.
 **Implementation/Code:** The following is the code for vector_2norm()
 
       import math
-      
+
       def vector_2norm(vector):
           sum = 0.0
           for i in range(len(vector)):
               sum += (vector[i])*(vector[i])
           norm_2 = math.pow(sum,0.5)
-      
+
           return norm_2

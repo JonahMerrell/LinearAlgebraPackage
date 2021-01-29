@@ -1,6 +1,6 @@
 # Software Manual (matrix_mult.py)
 
-## [Back](../softwaremanual)
+## [Back](../)
 
 **Routine Name:**           matrix_mult.py
 
@@ -17,7 +17,7 @@
 
 **Usage/Example:**
 
-Below shows an example of performing matrix multiplication using the routine "matrix_mult". 
+Below shows an example of performing matrix multiplication using the routine "matrix_mult".
 
       vector1 = [[2,1,4],[0,1,1]]
       vector2 = [[6,3,-1,0],[1,1,0,4],[-2,5,0,2]]
@@ -37,12 +37,12 @@ The above matrix printed is the result of the given matrix multiplication.
           width = len(vector2[0])
           height = len(vector1)
           final_matrix = [[0 for i in range(width)] for j in range(height)]
-      
+
           for i in range(width):
               for j in range(height):
                   sum = 0
                   for k in range(iter_count):
                       sum += vector1[j][k]*vector2[k][i]
                   final_matrix[j][i] = sum
-      
+
           return final_matrix

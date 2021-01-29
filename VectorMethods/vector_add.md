@@ -1,6 +1,6 @@
 # Software Manual (vector_add.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           vector_add.py
 
@@ -15,14 +15,14 @@
 **Input:** argument1: The first vector to be added<br>
 		   argument2: The second vector to be added<br>
 		   The 2 vectors given must have equal length.
-		   
+
 **Output:** This routine returns a vector that is obtained from the result of adding the
- corresponding componenents of 2 vectors together. 
+ corresponding componenents of 2 vectors together.
 
 **Usage/Example:**
 
 Below shows an example of 2 different vectors with a length of 5 being added together using the routine
- "vector_add". 
+ "vector_add".
 
       vector1 = [5,7,9,2,5]
       vector2 = [8,2,3,6,9]
@@ -44,5 +44,5 @@ The above vector printed is the "sum" of the previous 2 vectors provided. For ex
           vector_sum = [0]* len(vector1)
           for i in range(len(vector_sum)):
               vector_sum[i] = vector1[i] + vector2[i]
-      
+
           return vector_sum

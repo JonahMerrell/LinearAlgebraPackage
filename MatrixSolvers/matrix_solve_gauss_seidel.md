@@ -1,6 +1,6 @@
 # Software Manual (matrix_solve_gauss_seidel.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_solve_gauss_seidel.py
 
@@ -16,14 +16,14 @@ The solution is calculated by the gauss seidel iteration. The intial guess (x_0)
            argument3: The tolerance used to determine when to stop iterating. (A number like 0.00001)<br>
 		   argument4: The maximum iterations allowed while iterating.<br>
 		   argument5: An optional parameter "getIterCount" set to false by default. (See output for details)
-		   
+
 **Output:** This routine returns the solution vector "x" to the system of linear equations. If "getIterCount" was
  set to true, then the routine will also output the number of iterations done to compute x.
 
 **Usage/Example:**
 
 Below shows an example of solving a system of linear equations of the form "Ax = b" using the routine "matrix_solve_gauss_seidel".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix_example = [[5,1,2],[1,4,1],[2,2,5]]
       vector_example = [1,2,3]
@@ -37,11 +37,11 @@ In the example above, the matrix representing "A" in the system "Ax = b" had a w
  is the solution vector to the system, so that Ax = b.
 
 **Implementation/Code:** The following is the code for matrix_solve_gauss_seidel()
-      
+
       import sys, os
       sys.path.append(os.path.abspath('../../mylibrary'))
       from _mymodules import vector_scal_mult,vector_add, vector_2norm, matrix_mult, convert_vec_mat
-      
+
       def matrix_solve_gauss_seidel(matrix,vector_b,tol,max_iter,getIterCount=False):
           xnew = [0 for i in range(len(matrix))]
           error = tol * 10

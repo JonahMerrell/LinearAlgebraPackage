@@ -1,6 +1,6 @@
 # Software Manual (matrix_solve_upper_tri.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_solve_upper_tri.py
 
@@ -19,7 +19,7 @@
 **Usage/Example:**
 
 Below shows an example of solving a system of linear equations of the form "Ax = b" using the routine "matrix_solve_upper_tri".
- Then the solution vector is printed. 
+ Then the solution vector is printed.
 
       matrix = [[4,8,10,3,7],[0,2,5,7,2],[0,0,2,7,3],[0,0,0,3,1],[0,0,0,0,8]]
       vector = [12,25,38,27,48]
@@ -33,16 +33,16 @@ In the example above, the upper triangle matrix representing "A" in the system "
  is the solution vector to the system, so that Ax = b.
 
 **Implementation/Code:** The following is the code for matrix_solve_upper_tri()
-      
+
       def matrix_solve_upper_tri(matrix,vector):
-      
+
           n = len(matrix)
           solution = [0]*len(vector)
-      
+
           for i in range(n-1, -1, -1):
               temp_var = vector[i]
               for j in range(i+1, n):
                   temp_var -= matrix[i][j] * solution[j]
               solution[i] = temp_var/matrix[i][i]
-      
+
           return solution

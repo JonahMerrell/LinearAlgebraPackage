@@ -1,6 +1,6 @@
 # Software Manual (matrix_cholesky_fac.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_cholesky_fac.py
 
@@ -25,8 +25,8 @@ Below shows an example of performing cholesky factorization on a positive defina
 
 Output from the lines above:
 
-      [[1.7320508075688772, 0, 0], 
-	  [-0.5773502691896258, 1.2909944487358056, 0], 
+      [[1.7320508075688772, 0, 0],
+	  [-0.5773502691896258, 1.2909944487358056, 0],
 	  [0.0, -0.7745966692414834, 1.1832159566199232]]
 
 The above matrix printed is the cholesky-factorized result of the original matrix.
@@ -36,7 +36,7 @@ The above matrix printed is the cholesky-factorized result of the original matri
       import sys, os
       sys.path.append(os.path.abspath('../../mylibrary'))
       from _mymodules import matrix_check_sym
-      
+
       def matrix_cholesky_fac(matrix):
           if (not matrix_check_sym(matrix)):
               return False
@@ -48,10 +48,10 @@ The above matrix printed is the cholesky-factorized result of the original matri
                   for j in range(0, i):
                       temp_sum -= L_matrix[i][j] * L_matrix[k][j]
                   L_matrix[k][i] = temp_sum/L_matrix[i][i]
-      
+
               temp_sum = matrix[k][k]
               for j in range(0,k):
                   temp_sum -= pow(L_matrix[k][j],2)
               L_matrix[k][k] = pow(temp_sum,0.5)
-      
+
           return L_matrix

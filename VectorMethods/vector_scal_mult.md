@@ -1,6 +1,6 @@
 # Software Manual (vector_scal_mult.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           vector_scal_mult.py
 
@@ -13,14 +13,14 @@
 
 **Input:** argument1: The scalar to be multiplied with the vector<br>
 		   argument2: The vector to be multiplied
-		   
+
 **Output:** This routine returns a vector that is obtained from the result of multiplying all of its
-  componenents by the scalar given. 
+  componenents by the scalar given.
 
 **Usage/Example:**
 
 Below shows an example of a vector with a length of 5 being multiplied by 5 using the routine
- "vector_scal_mult". 
+ "vector_scal_mult".
 
       vector = [5,7,9,2,5]
       print(vector_scal_mult(5,vector))
@@ -41,5 +41,5 @@ The above vector printed is the 5 times greater then the original vector provide
           vector_new = vector.copy()
           for i in range(len(vector)):
               vector_new[i] *= scalar
-      
+
           return vector_new

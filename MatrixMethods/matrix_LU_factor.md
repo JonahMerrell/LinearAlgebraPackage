@@ -1,6 +1,6 @@
 # Software Manual (matrix_LU_factor.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           matrix_LU_factor.py
 
@@ -11,14 +11,14 @@
 **Description/Purpose:** This routine return the LU-factorization of a square matrix A. The 2 matrices L and U returned from this routine satisfy LU = A (Where A is the original matrix, and L is a lower triangle matrix, and U is an upper triangle matrix).
 
 **Input:** argument1: The matrix to perform LU factorization on<br>
-		   
+
 **Output:** This routine returns a list containing 2 elements. The first element is the
  lower triangle matrix, and the second element is the upper triangle matrix.
 
 **Usage/Example:**
 
 Below shows an example of a matrix with a length of 3 being LU factorized using the routine
- "matrix_LU_factor". 
+ "matrix_LU_factor".
 
       matrix = [[1.0,1.0,-1.0],[1.0,-2.0,3.0],[2.0,3.0,1.0]]
       matrix_new = matrix_LU_factor(matrix)
@@ -32,7 +32,7 @@ Output from the lines above:
       [1.0, 0, 0]
       [1.0, 1.0, 0]
       [2.0, -0.3333333333333333, 1.0]
-	  
+
       [1.0, 1.0, -1.0]
       [0.0, -3.0, 4.0]
       [0.0, 0.0, 4.333333333333333]
@@ -43,7 +43,7 @@ The two matrices printed above are the lower-triangle and upper-triangle matrice
 
 
       import copy
-      
+
       def matrix_LU_factor(matrix):
           n = len(matrix)
           u_matrix = copy.deepcopy(matrix)
@@ -58,6 +58,5 @@ The two matrices printed above are the lower-triangle and upper-triangle matrice
           for i in range(1,n):
               for j in range(0, i):
                   u_matrix[i][j] = 0.0
-      
-          return [l_matrix,u_matrix]
 
+          return [l_matrix,u_matrix]

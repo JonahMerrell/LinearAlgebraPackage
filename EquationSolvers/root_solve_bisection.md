@@ -1,6 +1,6 @@
 # Software Manual (root_solve_bisection.py)
 
-## [Back](softwaremanual.md)
+## [Back](../)
 
 **Routine Name:**           root_solve_bisection.py
 
@@ -14,13 +14,13 @@
 		   argument2: The left bound for the iteration<br>
 		   argument3: The right bound for the iteration<br>
            argument4: The tolerance used to determine when to stop iterating. (A number like 0.00001)<br>
-		   
+
 **Output:** This routine returns the solution x to the equation f(x)=0, where f(x) is given in the input.
 
 **Usage/Example:**
 
 Below shows an example of solving the equation math.cos(x) - x = 0 using the routine "root_solve_bisection".
- Then the solution is printed. 
+ Then the solution is printed.
 
       import math
 	  def function(x):
@@ -34,7 +34,7 @@ Output from the lines above:
 In the example above, 0.7390847206115723 is the approximation for the solution to the equation math.cos(x) - x = 0
 
 **Implementation/Code:** The following is the code for root_solve_bisection()
-      
+
       def root_solve_bisection(function, a, b, tol):
           #Check to see if a or b are already the solution
           if (function(a) == 0) :
